@@ -45,7 +45,7 @@ export function ChatPage({ onLogout }: ChatPageProps) {
 
     try {
       console.log(e);
-      const res = await axios.post(`http://localhost:3000/api/chat/generate`,
+      const res = await axios.post(`https://dooperbackend.sujeet.xyz/api/chat/generate`,
         { prompt : userMessage.content },
         { withCredentials : true },
       );

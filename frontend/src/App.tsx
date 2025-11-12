@@ -42,7 +42,7 @@ export default function App() {
 
   const handleLogout = async() => {
     try {
-    await axios.post("http://localhost:3000/api/auth/logout", {}, { withCredentials: true });
+    await axios.post("https://dooperbackend.sujeet.xyz/auth/logout", {}, { withCredentials: true });
     localStorage.removeItem('auth_token');
     setIsAuthenticated(false);
   } catch (error) {

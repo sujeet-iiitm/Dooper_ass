@@ -22,7 +22,7 @@ export function AuthForm({ onAuthSuccess }: AuthFormProps) {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/api/auth/login',
+        'https://dooperbackend.sujeet.xyz/api/auth/login',
         { email, password },
         { withCredentials: true }
       );
