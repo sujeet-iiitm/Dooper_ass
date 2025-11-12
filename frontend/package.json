@@ -1,19 +1,20 @@
 {
-      "name": "Chat Application Development",
+      "name": "chat-application-development",
       "version": "0.1.0",
       "private": true,
       "scripts": {
             "dev": "vite",
-            "build": "tsc && vite build",
-            "preview": "vite preview"
+            "build": "vite build"
       },
       "dependencies": {
             "@auth0/auth0-react": "^2.8.0",
+            "@tailwindcss/vite": "^4.1.17",
             "@types/axios": "^0.9.36",
             "axios": "^1.13.2",
             "lucide-react": "^0.487.0",
             "react": "^18.3.1",
-            "react-dom": "^18.3.1"
+            "react-dom": "^18.3.1",
+            "tailwindcss": "^4.1.17"
       },
       "devDependencies": {
             "@types/react": "^18.3.12",
