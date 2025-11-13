@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { Mail, Lock, Loader2 , LogInIcon } from 'lucide-react';
-import { useAuth0 } from "@auth0/auth0-react";
 
 interface AuthFormProps {
   onAuthSuccess: (token: string) => void;
@@ -13,7 +12,6 @@ export function AuthForm({ onAuthSuccess }: AuthFormProps) {
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  const { loginWithRedirect } = useAuth0();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -125,13 +123,6 @@ export function AuthForm({ onAuthSuccess }: AuthFormProps) {
               {isLogin ? "Don't have an account? Sign up" : 'Already have an account? Sign in'}
             </button>
           </div>
-          <div className='flex items-center justify-center'>
-          <button 
-           className="bg-gray-900 text-white py-2 px-4 rounded-md hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center justify-center"
-           onClick={() => loginWithRedirect()}>Log In
-           <LogInIcon></LogInIcon>Directly
-           </button>
-           </div>
         </div>
       </div>
     </div>
